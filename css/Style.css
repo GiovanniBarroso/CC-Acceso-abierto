@@ -1,0 +1,156 @@
+body {
+    background-color: beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "sec1"
+        "sec2"
+        "aside"
+        "footer"
+    ;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Primera columna para la imagen, segunda columna para el texto */
+    align-items: center;
+    /* Para alinear verticalmente */
+    text-align: center;
+    /* Para alinear horizontalmente */
+    background-color: aliceblue;
+    border: 10px;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+header img {
+    width: 100%;
+    /* Para asegurarse de que la imagen ocupe todo el ancho de la columna */
+    max-width: 130px;
+    /* Puedes ajustar este valor según tus necesidades */
+    height: auto;
+    /* Para mantener la proporción de aspecto */
+}
+
+
+
+nav {
+    grid-area: nav;
+    text-align: center;
+    margin-top: 1%;
+    border-radius: 20px;
+    background-color: azure;
+    padding: 15px 0;
+    /* Ajusta el espaciado superior e inferior */
+}
+
+nav a {
+    margin: 0 20px;
+    /* Ajusta el espaciado horizontal */
+    font-size: 18px;
+    /* Ajusta el tamaño de la fuente */
+}
+
+
+title {
+    grid-area: title;
+}
+
+#sec1 {
+    margin-top: 1%;
+    grid-area: section;
+    background-color: rgb(237, 178, 101);
+    padding: 2%;
+}
+
+#sec2 {
+    margin-top: 1%;
+    grid-area: section;
+    background-color: rgb(237, 178, 101);
+    padding: 2%;
+
+}
+
+h2,
+h3 {
+    text-align: center;
+    padding: 1%;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    margin-top: 1%;
+    grid-area: footer;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 20px;
+}
+
+#license-explanation {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+
+/* FORMATO PARA TABLET */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+    /* Agrega aquí los estilos específicos para tablet */
+    nav {
+        padding: 15px 0;
+        /* Ajusta el espaciado superior e inferior */
+    }
+
+    nav a {
+        font-size: 16px;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    #sec1 {
+        padding: 10px;
+        /* Ajusta el espaciado de la sección 1 para tablet */
+    }
+
+    footer {
+        padding: 15px;
+        /* Ajusta el espaciado del pie de página para tablet */
+    }
+}
+
+/* FORMATO PARA PANTALLA DE ESCRITORIO */
+@media only screen and (min-width: 1025px) {
+
+    /* Agrega aquí los estilos específicos para ordenador */
+    nav {
+        padding: 25px;
+        /* Ajusta el espaciado de la navegación para ordenador */
+    }
+
+    nav a {
+        font-size: 18px;
+        /* Ajusta el tamaño de la fuente para ordenador */
+    }
+
+    #sec1 {
+        padding: 20px;
+        /* Ajusta el espaciado de la sección 1 para ordenador */
+    }
+
+    footer {
+        padding: 20px;
+        /* Ajusta el espaciado del pie de página para ordenador */
+    }
+}
