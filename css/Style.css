@@ -42,6 +42,7 @@ nav {
     margin: 3%;
     border-radius: 20px;
     background-color: rgb(190, 190, 190);
+    padding: 2%;
 }
 
 nav a {
@@ -91,6 +92,40 @@ footer {
     margin-top: 10px;
 }
 
+ul {
+    padding: 3%;
+}
+
+li {
+    font: bold;
+}
+
+#btnVolver {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: rgb(190, 190, 190);
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btnVolver:hover {
+    background-color: rgb(124, 124, 124);
+}
+
+#anclas {
+
+    border-radius: 5px;
+    background-color: rgb(241, 69, 43);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#anclas:hover {
+    background-color: rgb(236, 121, 68);
+}
 
 
 /* FORMATO PARA TABLET */
@@ -107,7 +142,6 @@ footer {
     }
 }
 
-
 /* FORMATO PARA PANTALLA DE ESCRITORIO */
 @media only screen and (min-width: 1025px) {
     #container {
@@ -119,7 +153,6 @@ footer {
             "sec2 sec2 sec2 sec2"
             "footer footer footer footer";
     }
-
 
     header {
         min-width: 90%;
