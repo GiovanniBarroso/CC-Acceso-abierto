@@ -1,7 +1,7 @@
 body {
+    margin: 0%;
     background-color: beige;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 #container {
@@ -11,71 +11,62 @@ body {
         "nav"
         "sec1"
         "sec2"
-        "aside"
         "footer"
     ;
 }
 
 header {
+    margin-top: 1%;
     display: grid;
+    grid-area: header;
     grid-template-columns: auto 1fr;
-    /* Primera columna para la imagen, segunda columna para el texto */
     align-items: center;
-    /* Para alinear verticalmente */
     text-align: center;
-    /* Para alinear horizontalmente */
     background-color: aliceblue;
-    border: 10px;
     border-radius: 20px;
     padding: 1%;
+    border: 5px solid black;
 }
 
 header img {
+    border: 3px solid black;
     width: 100%;
-    /* Para asegurarse de que la imagen ocupe todo el ancho de la columna */
     max-width: 130px;
-    /* Puedes ajustar este valor según tus necesidades */
     height: auto;
-    /* Para mantener la proporción de aspecto */
 }
 
-
-
 nav {
+    border: 3px solid black;
+    justify-content: center;
     grid-area: nav;
-    text-align: center;
-    margin-top: 1%;
+    margin: 3%;
     border-radius: 20px;
     background-color: azure;
-    padding: 15px 0;
-    /* Ajusta el espaciado superior e inferior */
 }
 
 nav a {
     margin: 0 20px;
-    /* Ajusta el espaciado horizontal */
     font-size: 18px;
-    /* Ajusta el tamaño de la fuente */
-}
-
-
-title {
-    grid-area: title;
 }
 
 #sec1 {
+    margin: 1%;
+    border: 2px solid black;
+    border-radius: 20px;
     margin-top: 1%;
-    grid-area: section;
+    grid-area: sec1;
     background-color: rgb(237, 178, 101);
     padding: 2%;
 }
 
 #sec2 {
+    margin: 1%;
+    border: 2px solid black;
+    border-radius: 20px;
     margin-top: 1%;
-    grid-area: section;
+    grid-area: sec2;
     background-color: rgb(237, 178, 101);
     padding: 2%;
-
 }
 
 h2,
@@ -84,13 +75,12 @@ h3 {
     padding: 1%;
 }
 
-aside {
-    grid-area: aside;
-}
-
 footer {
-    margin-top: 1%;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 1%;
     grid-area: footer;
+    margin-top: 1%;
     background-color: antiquewhite;
     text-align: center;
     padding: 20px;
@@ -104,53 +94,53 @@ footer {
 
 
 
-
 /* FORMATO PARA TABLET */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-
-    /* Agrega aquí los estilos específicos para tablet */
-    nav {
-        padding: 15px 0;
-        /* Ajusta el espaciado superior e inferior */
-    }
-
-    nav a {
-        font-size: 16px;
-        /* Ajusta el tamaño de la fuente */
-    }
-
-    #sec1 {
-        padding: 10px;
-        /* Ajusta el espaciado de la sección 1 para tablet */
-    }
-
-    footer {
-        padding: 15px;
-        /* Ajusta el espaciado del pie de página para tablet */
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "sec1"
+            "sec2"
+            "footer";
     }
 }
 
+
 /* FORMATO PARA PANTALLA DE ESCRITORIO */
 @media only screen and (min-width: 1025px) {
-
-    /* Agrega aquí los estilos específicos para ordenador */
-    nav {
-        padding: 25px;
-        /* Ajusta el espaciado de la navegación para ordenador */
+    #container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "sec1 sec1 sec1 sec1"
+            "sec2 sec2 sec2 sec2"
+            "footer footer footer footer";
     }
 
-    nav a {
-        font-size: 18px;
-        /* Ajusta el tamaño de la fuente para ordenador */
+
+    header {
+        min-width: 90%;
+        grid-column: 1 / span 4;
+        justify-self: center;
+
+    }
+
+    nav {
+        text-align: center;
+        grid-column: 2 / span 2;
+
     }
 
     #sec1 {
-        padding: 20px;
-        /* Ajusta el espaciado de la sección 1 para ordenador */
+        grid-column: 2 / span 2;
     }
 
-    footer {
-        padding: 20px;
-        /* Ajusta el espaciado del pie de página para ordenador */
+    #sec2 {
+        grid-column: 2 / span 2;
     }
+
 }
